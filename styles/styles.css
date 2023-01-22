@@ -22,7 +22,7 @@ body, html {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 70%);
   width: 100%;
 }
 
@@ -66,7 +66,7 @@ body, html {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  text-transform: uppercase;
+  text-transform: uppercase
 }
 
 .emailButton span {
@@ -89,7 +89,7 @@ body, html {
   padding-right: 25px;
 }
 
-.emailButton:hover span:after {
+.emailButton::hover span:after {
   opacity: 1;
   right: 0;
 }
