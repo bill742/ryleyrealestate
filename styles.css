@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-image: url(../images/background2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.heading {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: #FAF9F6;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #FAF9F6;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+}
+
+.emailButton {
+  margin-top: 2.3rem;
+  margin-bottom: 2.3rem;
+  border-radius: 0.5rem;
+  background-color: #69c;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1.25rem;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.emailButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.emailButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.emailButton:hover span {
+  padding-right: 25px;
+}
+
+.emailButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  fill: #FAF9F6;
+}
+
+.icon:hover {
+  fill: #ccc;
+  transition-duration: .5s;
+  transition-timing-function: ease;
+}
