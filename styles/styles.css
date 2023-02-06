@@ -1,15 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+  --font-color: #222;
+  --background: #69c;
+}
 
 body, html {
   height: 100%;
-  font-family: Roboto, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--background);
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
-  background-image: url("/images/background.jpeg");
+  background-image: url("/images/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,43 +28,74 @@ body, html {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
-  background-color: rgb(0 0 0 / 70%);
-  width: 100%;
+  background-color: rgb(102 153 204 / 80%);
+  width: 50%;
+}
+
+.hero {
+  display: none;
+}
+
+@media only screen and (max-width: 840px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: none;
+    background-size: unset;
+  }
+
+  .textContainer {
+    width: 100%;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    display: block;
+    width: 100%;
+  }
 }
 
 .heading {
   font-size: 3.125rem;
   font-weight: 700;
-  color: #FAF9F6;
+  color: var(--font-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--font-color);
   margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .text {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.8;
-  color: #FAF9F6;
+  color: var(--font-color);
   text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-  .heading {
-    font-size: 2rem;
-  }
-
-  .text {
-    font-size: 1.5rem;
-  }
 }
 
 .emailButton {
   margin-top: 2.3rem;
   margin-bottom: 2.3rem;
   border-radius: 0.5rem;
-  background-color: #69c;
-  border: none;
-  color: #FFF;
+  background-color: var(--background);
+  color: var(--font-color);
   text-align: center;
   font-size: 1.25rem;
   font-weight: 700;
@@ -66,7 +103,8 @@ body, html {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  text-transform: uppercase
+  text-transform: uppercase;
+  border: 2px solid var(--font-color);
 }
 
 .emailButton span {
@@ -94,6 +132,29 @@ body, html {
   right: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .heading2 {
+    font-size: 1.5rem;
+  }
+
+  .heading3 {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .emailButton {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
 .socialContainer {
   display: flex;
   flex-direction: row;
@@ -104,7 +165,7 @@ body, html {
 .icon {
   width: 1.875rem;
   height: 1.875rem;
-  fill: #FAF9F6;
+  fill: var(--font-color);
 }
 
 .icon:hover {
