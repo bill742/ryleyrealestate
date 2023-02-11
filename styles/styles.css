@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
-
 :root {
   --font-color: #222;
-  --background: #69c;
+  --background: #FAF9F6;
 }
 
 body, html {
   height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: var(--background);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--background)
 }
 
 .container {
@@ -26,59 +24,48 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  row-gap: 1rem;
   margin: 1rem;
   padding: 1rem;
-  background-color: rgb(102 153 204 / 80%);
+  background-color: rgb(250 249 246 / 80%);
   width: 50%;
-}
-
-.hero {
-  display: none;
 }
 
 @media only screen and (max-width: 840px) {
   .container {
     flex-direction: column;
     justify-content: flex-start;
-    background-image: none;
-    background-size: unset;
   }
 
   .textContainer {
     width: 100%;
     margin: 0;
     padding: 2rem 1rem;
-  }
-
-  .hero {
-    display: block;
-    width: 100%;
+    flex-grow: 1;
+    row-gap: 0.5rem;
   }
 }
 
 .heading {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--font-color);
-  margin-bottom: 0.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .heading2 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: #222;
-  margin-bottom: 0.5rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .heading3 {
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--font-color);
-  margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -91,8 +78,6 @@ body, html {
 }
 
 .emailButton {
-  margin-top: 2.3rem;
-  margin-bottom: 2.3rem;
   border-radius: 0.5rem;
   background-color: var(--background);
   color: var(--font-color);
@@ -132,7 +117,7 @@ body, html {
   right: 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px), screen and (max-height: 660px) {
   .heading {
     font-size: 2rem;
   }
